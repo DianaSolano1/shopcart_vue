@@ -1,15 +1,13 @@
-import { getProducts } from "./products/actions";
-import { setProducts } from "./products/mutations";
+import { actions } from "./products/actions";
+import { getters } from "./products/getters";
+import { mutations } from "./products/mutations";
 
 
 export default {
     state: {
         products: []
     },
-    actions: {
-        getProducts: getProducts
-    },
-    mutations: {
-        setProducts: setProducts
-    }
+    actions: actions,
+    mutations: mutations,
+    getters: getters
 }

@@ -1,9 +1,15 @@
 import axios from 'axios';
 import { APIURL } from '../config';
 
-export const getProducts = async (context) => {
+const getProducts = async (context) => {
 
-    const products = await axios.get(`${APIURL}/products`);
+    const { data } = await axios.get(`${APIURL}/products`);
 
-    context.commit('setProducts', products);
+    console.log(data);
+
+    context.commit('setProducts', data);
+}
+
+export const actions = {
+    getProducts
 }
